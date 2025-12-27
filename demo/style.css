@@ -1,0 +1,102 @@
+:root {
+  font-family: 'Inter', sans-serif;
+  background: #111;
+  color: white;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BRANDING */
+.brand-link {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 18px;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    background: rgba(255,255,255,0.1);
+    padding: 10px 15px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    transition: 0.2s;
+}
+.brand-link:hover { background: rgba(255,255,255,0.2); }
+
+.credits {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #666;
+    z-index: 100;
+    pointer-events: none;
+}
+.credits a { color: #fff; pointer-events: auto; }
+
+/* PC SIMULATOR */
+#sim-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+#sim-phone {
+  width: 360px;
+  height: 640px;
+  background: #000;
+  border: 12px solid #222;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  transform-origin: center;
+  /* Smoother visual rotation */
+  transition: transform 0.1s linear;
+}
+
+.slider-box {
+  text-align: center;
+  background: #222;
+  padding: 20px;
+  border-radius: 12px;
+  min-width: 300px;
+}
+.slider-box label { display: block; margin-bottom: 10px; font-weight: 600; font-size: 14px; color: #888; }
+
+input[type=range] {
+  width: 100%;
+  accent-color: #00ccff;
+}
+
+/* CANVAS */
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* MOBILE */
+.hidden { display: none !important; }
+
+#permission-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.9);
+  display: flex; justify-content: center; align-items: center; z-index: 999;
+}
+
+#btn-enable {
+  background: #00aaff; color: white; border: none;
+  padding: 15px 30px; font-size: 18px; font-weight: bold;
+  border-radius: 30px; cursor: pointer;
+}
