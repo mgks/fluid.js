@@ -1,6 +1,6 @@
 # 🌊 fluid.js
 
-**A tiny (<4KB), zero-dependency fluid simulation for the web that reacts to device motion.**
+**A tiny, zero-dependency fluid simulation for the web that reacts to device motion.**
 
 Most fluid simulations are heavy particle engines (100KB+). **fluid.js** is different. It uses a 2D spring-mass system coupled with inertial angular physics to simulate the *feeling* of liquid in a container.
 
@@ -12,7 +12,7 @@ It is designed for **UI Backgrounds**, **Loading States**, and **Interactive Car
 <a href="https://github.com/mgks/fluid.js/stargazers"><img src="https://img.shields.io/github/stars/mgks/fluid.js?style=flat-square&logo=github" alt="stars"></a>
 
 ### ✨ Features
-- **Micro-Library:** < 4KB (minified + gzipped).
+- **Micro-Library:** ~4KB (minified + gzipped).
 - **Device Ready:** Reacts to Gyroscope/Accelerometer (Mobile) and Mouse/Slider (PC).
 - **Inertial Physics:** Simulates "Slosh", momentum, and wall climbing (U-Shape).
 - **Zero Dependencies:** Pure Vanilla JS. Works with React, Vue, Svelte, or plain HTML.
