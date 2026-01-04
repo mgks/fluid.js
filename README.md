@@ -1,32 +1,31 @@
-# 🌊 fluid.js
+# fluid.js
 
 **A tiny, zero-dependency fluid simulation for the web that reacts to device motion.**
+
+<p>
+  <img src="https://img.shields.io/npm/v/fluid.js.svg?style=flat-square&color=d25353" alt="npm version">
+  <img src="https://img.shields.io/bundlephobia/minzip/fluid.js?style=flat-square&color=38bd24" alt="size">
+  <img src="https://img.shields.io/npm/dt/fluid.js.svg?style=flat-square&color=38bd24" alt="npm downloads">
+  <img src="https://img.shields.io/github/license/mgks/fluid.js.svg?style=flat-square&color=blue" alt="license">
+</p>
 
 Most fluid simulations are heavy particle engines (100KB+). **fluid.js** is different. It uses a 2D spring-mass system coupled with inertial angular physics to simulate the *feeling* of liquid in a container.
 
 It is designed for **UI Backgrounds**, **Loading States**, and **Interactive Cards**.
 
-<a href="https://www.npmjs.com/package/fluid.js"><img src="https://img.shields.io/npm/v/fluid.js.svg?style=flat-square&color=007acc" alt="npm version"></a>
-<a href="https://www.npmjs.com/package/fluid.js"><img src="https://img.shields.io/npm/dt/fluid.js.svg?style=flat-square&color=success" alt="npm downloads"></a>
-<a href="https://github.com/mgks/fluid.js/blob/main/LICENSE"><img src="https://img.shields.io/github/license/mgks/fluid.js.svg?style=flat-square&color=blue" alt="license"></a>
-<a href="https://github.com/mgks/fluid.js/stargazers"><img src="https://img.shields.io/github/stars/mgks/fluid.js?style=flat-square&logo=github" alt="stars"></a>
-
-### ✨ Features
+## Features
 - **Micro-Library:** ~4KB (minified + gzipped).
 - **Device Ready:** Reacts to Gyroscope/Accelerometer (Mobile) and Mouse/Slider (PC).
 - **Inertial Physics:** Simulates "Slosh", momentum, and wall climbing (U-Shape).
 - **Zero Dependencies:** Pure Vanilla JS. Works with React, Vue, Svelte, or plain HTML.
 
----
-
-## 🚀 Installation
+## Installation
 
 ```bash
 npm install fluid.js
-# (Or whatever name you successfully publish)
 ```
 
-## 💻 Usage
+## Usage
 
 ### Vanilla JS / HTML
 ```html
@@ -65,9 +64,7 @@ export default function LiquidCard() {
 }
 ```
 
----
-
-## ⚙️ Configuration
+## Configuration
 
 You can tune the liquid to feel like Water, Oil, or Jelly.
 
@@ -98,9 +95,7 @@ If you don't want to tune physics manually, copy these values:
 { tension: 0.08, dampening: 0.05, inertia: 0.80 }
 ```
 
----
-
-## ⚠️ Mobile Permissions (iOS)
+## Mobile Permissions (iOS)
 
 On iOS 13+, you must request permission to access the Gyroscope. The browser **will not** let you access sensors automatically. You must trigger this from a button click (e.g., "Enable Gravity").
 
@@ -108,16 +103,16 @@ On iOS 13+, you must request permission to access the Gyroscope. The browser **w
 // Run this inside a button click handler
 if (typeof DeviceMotionEvent.requestPermission === 'function') {
     DeviceMotionEvent.requestPermission()
-        .then(response => {
-            if (response === 'granted') {
-                // Sensors are now active, fluid.js will auto-detect them
-            }
-        })
-        .catch(console.error);
+    .then(response => {
+        if (response === 'granted') {
+            // Sensors are now active, fluid.js will auto-detect them
+        }
+    })
+    .catch(console.error);
 }
 ```
 
-## 📄 License
+## License
 
 MIT
 
